@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window to the World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f1012;
+        color: #e5e7eb;
+      }
+      /* Soft scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      .fade-in {
+        animation: fadeIn 1.2s ease-in-out forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      /* Tiered Glass System */
+      .glass-panel {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 
+          inset 0 1px 0 rgba(255, 255, 255, 0.05),
+          0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        transition: background 0.5s ease, backdrop-filter 0.5s ease;
+      }
+      
+      /* Tier 1: Dropdown / Ambient elements */
+      .glass-medium {
+        background: linear-gradient(180deg, rgba(35, 38, 44, 0.5) 0%, rgba(25, 28, 32, 0.6) 100%);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+      }
+
+      /* Tier 2: Modal / Focused panels */
+      .glass-strong {
+        background: linear-gradient(180deg, rgba(40, 44, 52, 0.65) 0%, rgba(30, 33, 38, 0.75) 100%);
+        backdrop-filter: blur(32px);
+        -webkit-backdrop-filter: blur(32px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .text-glow {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
